@@ -1,4 +1,4 @@
-package com.educompass.resource;
+package app.resource;
 
 public enum ResourceType {
     PDF_Notes,

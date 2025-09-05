@@ -1,6 +1,6 @@
-package com.educompass.test;
+package app.test;
 
-import com.educompass.resource.*;
+import app.resource.*;
 // for Testing purposes
 public class Test {
     public static void main(String[] args) {

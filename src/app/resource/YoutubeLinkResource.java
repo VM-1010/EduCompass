@@ -1,4 +1,4 @@
-package com.educompass.resource;
+package app.resource;
 
 import java.time.LocalDate;
 
@@ -28,7 +28,7 @@ public class YoutubeLinkResource extends Resource {
         try {
             if (Desktop.getDesktop().isSupported(Desktop.Action.BROWSE))
                 Desktop.getDesktop().browse(VideoLink);
-            else // if desktop doesn't support the BROWSE Action (linux/mac), then xdg-open is used, usually browse is supported on windows
+            else // if desktop doesn't support the BROWSE Action, then xdg-open is used
                 Runtime.getRuntime().exec(new String[]{"xdg-open", this.getUrl()}); 
         } 
         catch (Exception e) {

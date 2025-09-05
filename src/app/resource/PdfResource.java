@@ -1,5 +1,5 @@
-package com.educompass.resource;
-import com.educompass.exception.BadLinkException;
+package app.resource;
+import app.exception.*;
 import java.net.URI;
 import java.net.URL;
 import java.time.LocalDate;
@@ -15,7 +15,7 @@ public class PdfResource extends Resource {
         try {
             this.pdfLink = new URL(url).toURI();
         } catch (Exception e) {
-            throw new BadLinkException(e);
+            throw new BadResourceException(e);
         }
     } 
 

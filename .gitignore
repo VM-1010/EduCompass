@@ -12,6 +12,7 @@
 /.idea/
 /.vscode/
 /*.iml
+/.settings/
 
 # OS junk
 .DS_Store

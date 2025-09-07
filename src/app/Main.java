@@ -11,6 +11,7 @@ import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.text.Font;
 
 
 public class Main extends Application {
@@ -22,18 +23,16 @@ public class Main extends Application {
 	
 	@Override
 	public void start(Stage stage) throws Exception {
-		Parameters cmdparams = getParameters();
-		//stage.setMinHeight(600);
-		//stage.setMinWidth(800);
 		stage.setTitle(apptitle);
-		stage.setResizable(false);
+		stage.setResizable(true);
+		stage.setMinWidth(800);
+		stage.setMinHeight(600);
 		stage.getIcons().add(appicon);
-		// System.out.println(cmdparams.getRaw());
-		boolean isAdmin = cmdparams.getRaw().contains("--admin-login");
-		MainWindowforUser m = new MainWindowforUser();
-		//FXMLLoader loader = new FXMLLoader(getClass().getResource("resources/menulayout.fxml"));
+		
 		Parent root =FXMLLoader.load(getClass().getResource("/resources/menulayout.fxml")); //loader.load();
 		Scene scene = new Scene(root);
+		
+		Font.loadFont(getClass().getResource("/resources/fonts/Ubuntu-Regular.ttf").toExternalForm(), 20);
 		
 		stage.setScene(scene);
 		stage.show();

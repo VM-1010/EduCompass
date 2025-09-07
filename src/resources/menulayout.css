@@ -1,7 +1,44 @@
 .loginbutton:hover {
-	-fx-background-color: #0955dd;
-	
+	-fx-background-color: #2d6cff;
+	-fx-font-family: "Ubuntu";
+	-fx-border-width: 3px;
+	-fx-border-color: #2d6cff;
 }
+
+.loginbutton:pressed {
+	-fx-background-color: #1647dd;
+	-fx-border-width: 3px;
+	-fx-border-color: #2d6cff;
+}
+
 .loginbutton {
-	-fx-background-color: #1777ff;
+	-fx-background-color: #ffffff;
+	-fx-text-fill: #000000;
+	-fx-border-width: 3px;
+	-fx-border-color: #2d6cff;
+	-fx-font-family: "Ubuntu";
+	-fx-font-size: 16pt;
+}
+
+.label {
+	-fx-font-family: "Ubuntu";
+	-fx-font-size: 28pt;
+}
+
+.inputfield {
+	-fx-background-color: #fff;
+	-fx-text-fill: #000;
+	-fx-border-width: 3px;
+	-fx-border-color: #2d6cff;
+	-fx-font-family: "Ubuntu";
+	-fx-font-size: 16pt;
+}
+
+.inputfield:active {
+	-fx-background-color: #fff;
+	-fx-text-fill: #000;
+	-fx-border-width: 3px;
+	-fx-border-color: #56ff76;
+	-fx-font-family: "Ubuntu";
+	-fx-font-size: 16pt;
 }

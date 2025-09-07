@@ -1,18 +1,21 @@
-# Maven build output
+# bin
 /target/
 /bin/
 
-# Compiled class files
+# class files
 *.class
 
-# Logs
+# logs
 *.log
 
-# IDE configs
+# ide files
 /.idea/
 /.vscode/
 /*.iml
 /.settings/
+.project
+.classpath
+build.fxbuild
 
 # OS junk
 .DS_Store

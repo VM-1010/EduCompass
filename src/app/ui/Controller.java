@@ -1,7 +1,6 @@
 package app.ui;
 
 import java.io.IOException;
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,49 +8,27 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import app.ui.Control;
+
 public class Controller {
 	
-	@FXML
+	
+	
+	@FXML // when user tries to "login as user"
 	private void loginuser(ActionEvent event) throws Exception {
-		Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
-		// this fetches the primary stage
-		stage.setScene(SceneSwitcher.getScene(Scenetype.UserWelcome));
-		
+		Control.changeScene(event, Scenetype.UserWelcome);
 	}
 	
-	@FXML
+	@FXML // when user tries to "login as admin"
 	private void loginadmin(ActionEvent event) throws Exception {
-		Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
-		stage.setScene(SceneSwitcher.getScene(Scenetype.AdminWelcome));
-		
+		Control.changeScene(event, Scenetype.AdminWelcome);
 	}
 
-	@FXML
+	@FXML // when user tries to "return to login" from either of welcome screens
 	private void returntologin(ActionEvent event) throws Exception {
-		Stage stage = (Stage) ((javafx.scene.Node)event.getSource()).getScene().getWindow();
-		stage.setScene(SceneSwitcher.getScene(Scenetype.LoginScreen));
+		Control.changeScene(event, Scenetype.LoginScreen);
 	}
 }
 
-class SceneSwitcher {
-	static Scene getScene(Scenetype s) throws IOException  {
-		Parent parent = FXMLLoader.load(SceneSwitcher.class.getResource(s.getFxml()));
-		return new Scene(parent);
-		
-	}
-}
 
-enum Scenetype {
-	UserWelcome("/resources/userloggedin.fxml"),
-	AdminWelcome("/resources/adminloggedin.fxml"),
-	LoginScreen("/resources/menulayout.fxml");
-	private final String fxmlLocation;
-	Scenetype(String _location) {
-		this.fxmlLocation = _location;
-	}
-	String getFxml() {
-		System.out.println(this.fxmlLocation);
-		return this.fxmlLocation;
-	}
-}
 

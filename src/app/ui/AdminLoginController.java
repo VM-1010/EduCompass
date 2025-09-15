@@ -20,6 +20,7 @@ public class AdminLoginController {
 	
 	@FXML
 	private void adminpressedlogin(ActionEvent e) throws Exception {
+		submit.setText("wait..");
 		MessageDigest md = MessageDigest.getInstance("SHA-256");
 		byte[] hashbytes = md.digest(pass.getText().getBytes());
 		String hash = bytesToHex(hashbytes);
@@ -29,6 +30,7 @@ public class AdminLoginController {
 			pass.setText("");
 			pass.setStyle("-fx-border-color: #ff0000");
 			pass.setPromptText("Invalid Password");
+			submit.setText("Login");
 		}
 		
 	}

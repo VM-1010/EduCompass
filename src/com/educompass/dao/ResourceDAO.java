@@ -3,6 +3,9 @@ import java.util.*;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.sql.*;
+
+import com.educompass.exception.IDMismatchException;
+import com.educompass.exception.InvalidResourceException;
 import com.educompass.model.*;
 
 public class ResourceDAO {
@@ -13,6 +16,7 @@ public class ResourceDAO {
     public ResourceDAO() throws SQLException{
         c = DriverManager.getConnection("jdbc:sqlite:resource.db");
         s = c.createStatement();
+        // TODO  remove try
         try {
             schema = new String(getClass().getResourceAsStream("/database/schema.sql").readAllBytes(), StandardCharsets.UTF_8);
             init = new String(getClass().getResourceAsStream("/database/init.sql").readAllBytes(), StandardCharsets.UTF_8);
@@ -50,10 +54,29 @@ public class ResourceDAO {
         return ls;
     }
 
-    // TODO Change getAllResources()
-    //  need to add a copy of get all resource that accepts the enum restype and returns a list based on that, and need to make getAllResources call it with null to access all resources
+
+    // INFO Service implements different cases of resources to add
+
+    // TODO might need overloading for each restype
+    public void addResource(String resource_title, String resource_source, int semester, String course, String resource_type, String resource_link, int pdf_pages, double video_hrs, int vidcount, double course_price, double book_price, int nptel_year) throws InvalidResourceException {
+        // TODO
+    }
+
+    public void getColOfRowId(int id, String col) {
+
+    }
+
+    // TODO also need to overload
+    public void setResource(int id, String resource_title, String resource_source, int semester, String course, String resource_type, String resource_link, int pdf_pages, double video_hrs, int vidcount, double course_price, double book_price, int nptel_year) {
 
 
+    }
+
+    public void deleteResourceById(int id) throws IDMismatchException {
+
+    }
+
+// TODO this should be moved to a service
     public void printAllTitles() {
         try {
             int count = 0;
@@ -66,7 +89,7 @@ public class ResourceDAO {
     }
 
 
-
+// TODO this should be moved to a service
     public void printAllBooksWithPriceLessThan(int n) {
         try {
             int count = 0;

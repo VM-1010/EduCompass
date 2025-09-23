@@ -97,6 +97,6 @@ public abstract class Resource {
     }
 
     // TODO change type to ResType
-    public abstract String getType();
+    public abstract ResType getType();
     
 }

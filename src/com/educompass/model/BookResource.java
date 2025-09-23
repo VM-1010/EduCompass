@@ -21,8 +21,8 @@ public BookResource(Integer id, String title, int semester, String course, ResLi
     }
 
     @Override
-    public String getType() {
-        return "book";
+    public ResType getType() {
+        return ResType.BOOK;
     }
 
 }

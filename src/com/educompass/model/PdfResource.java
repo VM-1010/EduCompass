@@ -13,7 +13,7 @@ public class PdfResource extends Resource {
         }
 
     @Override
-    public String getType() {
-        return "pdf";
+    public ResType getType() {
+        return ResType.PDF;
     }
 }

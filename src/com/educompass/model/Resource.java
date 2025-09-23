@@ -93,7 +93,7 @@ public abstract class Resource {
     }
     
     @Override public String toString() {
-        return this.title+" ---  "+this.getType();
+        return this.title + " --- " + this.getType() + "\n";
     }
 
     // TODO change type to ResType

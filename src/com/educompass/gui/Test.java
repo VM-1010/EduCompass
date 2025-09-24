@@ -3,13 +3,18 @@ package com.educompass.gui;
 import java.util.*;
 
 import com.educompass.gui.controller.CardController;
-
+import com.educompass.model.Resource;
+import com.educompass.service.ResourceService;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.ScrollPane.ScrollBarPolicy;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -40,24 +45,45 @@ public class Test {
      void loadTestCards(Stage s) {
         
         VBox p = new VBox();
+        ScrollPane sp = new ScrollPane(p);
+        HBox h = new HBox(sp);
+        h.setAlignment(Pos.TOP_CENTER);
+        // sp.setCenterShape(true);
         p.setAlignment(Pos.TOP_CENTER);
         p.setPadding(new Insets(30,0,0,0));
         p.setSpacing(20);
-        Scene sc = new Scene(p);
+        sp.setVbarPolicy(ScrollBarPolicy.NEVER);
+        Scene sc = new Scene(h);
         s.setScene(sc);
-        p.getChildren().add(new Text("This is currently not functional yet!!"));
+        Text t = new Text("demo for scrolling view of resoruce cards");
+        t.setFont(Font.font(20));
+        p.getChildren().add(t);
+
         DummyService d = new DummyService();
-        for (CardData c : d.getFive(1)) {
+         int i = 0;
+        ResourceService rs = new ResourceService();
+        for (Resource r : rs.fetchAllResources()) {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resourcecard.fxml"));
+            
             try {
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("/fxml/resourcecard.fxml"));
                 p.getChildren().add(loader.load());
-                CardController cc = loader.getController();
-                cc.setTitle(c.title());
-                cc.setType(c.type());
             } catch (Exception e) {
-                e.printStackTrace();
+                IO.println("unable to fetch children");
+            }
+            CardController cc = loader.getController();
+            try {
+                cc.setTitle(r.getTitle());
+                cc.setType(r.getType().toString());
+                cc.setId(r.getId());
+                cc.setTarget(r.getResource_link().getLink());
+                i ++;
+            } catch (Exception e) {
+                cc.setTitle("Unkknown Resource");
+                cc.setType("unknown");
+                cc.setId("???");
             }
         }
+        IO.println(i);
 
     }
 }

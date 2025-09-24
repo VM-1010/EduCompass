@@ -2,6 +2,20 @@
 delete from resources;
 delete from sqlite_sequence where name='resources';
 
+INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link, course_price) VALUES
+        ('Computer Science for Web Programming', 'edX', 4, 'Web Technologies', 'onlinecourse', 'https://www.edx.org/course/computer-science-for-web-programming', 24503),
+        ('Fundamentals of Computer Science', 'edX', 1, 'Fundamentals', 'onlinecourse', 'https://www.edx.org/course/fundamentals-of-computer-science', 52456),
+        ('C++ Programming: Basic Skills', 'edX', 2, 'C++ Programming', 'onlinecourse', 'https://www.edx.org/course/c-programming-basic-skills', 11657);
+
+INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link) VALUES
+        ('freeCodeCamp', 'GitHub', 1, 'Full Stack', 'githubrepo', 'https://github.com/freeCodeCamp/freeCodeCamp'),
+        ('EbookFoundation/free-programming-books', 'GitHub', 4, 'Learning Resources', 'githubrepo', 'https://github.com/EbookFoundation/free-programming-books'),
+        ('Coding Interview University', 'GitHub', 7, 'Interview Preparation', 'githubrepo', 'https://github.com/jwasham/coding-interview-university');
+
+INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link, nptel_year) VALUES
+        ('Theory of Computation', 'NPTEL', 4, 'Theory of Computation', 'nptel', 'https://onlinecourses.nptel.ac.in/noc25_cs119/preview', 2025),
+        ('Programming in Modern C++', 'NPTEL', 2, 'C++ Programming', 'nptel', 'https://nptel.ac.in/courses/106106146', 2025),
+        ('Introduction to Machine Learning', 'NPTEL', 8, 'Machine Learning', 'nptel', 'https://nptel.ac.in/courses/106106139', 2025);
 
 insert into resources(resource_title, resource_source, semester, course, resource_type, resource_link, book_price) 
 values 
@@ -69,17 +83,3 @@ INSERT INTO resources (resource_title, resource_source, semester, course, resour
         ('C++ Programming Tutorials Playlist', 'thenewboston', 3, 'Programming', 'ytplaylist', 'https://www.youtube.com/playlist?list=PL6gx4Cwl9DGDQ5Drb_Ilm4xEytioTod3c', 73),
         ('Python Tutorials – Programming with Mosh', 'Programming with Mosh', 2, 'Python Programming', 'ytplaylist', 'https://www.youtube.com/playlist?list=PLTjRvDozrdlw5rPfZ_lnPmwG3YqioMqNu', 21);
 
-INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link, courseprice) VALUES
-        ('Computer Science for Web Programming', 'edX', 4, 'Web Technologies', 'onlinecourse', 'https://www.edx.org/course/computer-science-for-web-programming', 24503),
-        ('Fundamentals of Computer Science', 'edX', 1, 'Fundamentals', 'onlinecourse', 'https://www.edx.org/course/fundamentals-of-computer-science', 52456),
-        ('C++ Programming: Basic Skills', 'edX', 2, 'C++ Programming', 'onlinecourse', 'https://www.edx.org/course/c-programming-basic-skills', 11657);
-
-INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link) VALUES
-        ('freeCodeCamp', 'GitHub', 1, 'Full Stack', 'githubrepo', 'https://github.com/freeCodeCamp/freeCodeCamp'),
-        ('EbookFoundation/free-programming-books', 'GitHub', 4, 'Learning Resources', 'githubrepo', 'https://github.com/EbookFoundation/free-programming-books'),
-        ('Coding Interview University', 'GitHub', 7, 'Interview Preparation', 'githubrepo', 'https://github.com/jwasham/coding-interview-university');
-
-INSERT INTO resources (resource_title, resource_source, semester, course, resource_type, resource_link, nptelyear) VALUES
-        ('Theory of Computation', 'NPTEL', 4, 'Theory of Computation', 'nptel', 'https://onlinecourses.nptel.ac.in/noc25_cs119/preview', 2025),
-        ('Programming in Modern C++', 'NPTEL', 2, 'C++ Programming', 'nptel', 'https://nptel.ac.in/courses/106106146', 2025),
-        ('Introduction to Machine Learning', 'NPTEL', 8, 'Machine Learning', 'nptel', 'https://nptel.ac.in/courses/106106139', 2025);

@@ -11,6 +11,7 @@ import com.educompass.model.*;
 
 public class ResourceDAO {
     Connection c;
+    // TODO statement is unsafe 
     Statement s;
     String schema;  
     String init; // holds the inital rows

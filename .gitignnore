@@ -14,7 +14,6 @@
 *.jar
 *.war
 *.ear
-lib/
 lib/*
 
 # Virtual machine crash logs
@@ -49,3 +48,7 @@ target/
 
 # VS Code
 .vscode/
+
+
+# database
+resource.db

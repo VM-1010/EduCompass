@@ -1,3 +1,3 @@
 run: 
-	javac -cp "lib/sqlite.jar" -d out -sourcepath src src/com/educompass/App.java
-	java -cp "out;lib/sqlite.jar" com.educompass.App
+	javac -cp "lib/*" -d out -sourcepath src src/com/educompass/gui/Main.java
+	java --module-path lib --add-modules javafx.controls,javafx.fxml -cp "out;lib/*" com.educompass.gui.Main

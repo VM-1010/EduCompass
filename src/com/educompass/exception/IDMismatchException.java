@@ -1,8 +1,7 @@
 package com.educompass.exception;
 
-import java.sql.SQLException;
 
-public class IDMismatchException extends SQLException {
+public class IDMismatchException extends RuntimeException {
     public IDMismatchException(int id) {
         super("Tried to access non-existent id : " + id);
     }

@@ -1,8 +1,7 @@
 package com.educompass.exception;
 
-import java.sql.SQLException;
 
-public class InvalidAccessException extends SQLException {
+public class InvalidAccessException extends RuntimeException{
     public InvalidAccessException() {
         super("Tried to access an invalid field");
     }

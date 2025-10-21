@@ -1,0 +1,34 @@
+.tab-pane .tab-header-background {
+    -fx-background-color: #000; /* tab bar background */
+}
+
+.title-bar {
+    
+}
+
+.tab-pane {
+    -fx-background-color: black;
+}
+
+.tab-pane .tab {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+    -fx-background-color: #000;
+    -fx-text-base-color: white;
+    -fx-padding: 8 15 8 15;
+    
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #ff6600;
+    -fx-text-base-color: black;
+    -fx-border-color: #aa4400;
+}
+
+.tab-pane .tab:hover {
+    -fx-background-color: #aa4400;
+}
+
+
+
+

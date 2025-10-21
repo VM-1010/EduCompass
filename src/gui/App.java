@@ -2,6 +2,7 @@ package gui;
 import java.awt.Paint;
 import java.util.ArrayList;
 
+import dao.MainDao;
 import javafx.application.Application;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -40,6 +41,10 @@ public class App extends Application{
 
     @Override
     public void start(Stage arg0) throws Exception {
+        
+        MainDao d = new MainDao();
+        d.dbtest();
+        
         s = new Stage();
         
         //Parent p = new FXMLLoader(getClass().getResource("resources/adminscreen.fxml")).load();

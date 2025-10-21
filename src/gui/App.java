@@ -43,7 +43,9 @@ public class App extends Application{
     public void start(Stage arg0) throws Exception {
         
         MainDao d = new MainDao();
-        d.dbtest();
+        for (model.Resource r : d.fetchAll()) {
+            IO.println(r);
+        }
         
         s = new Stage();
         

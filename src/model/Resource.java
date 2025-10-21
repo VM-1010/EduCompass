@@ -15,6 +15,12 @@ public class Resource {
         this.type = type;
         this.url = url;
     }
+    public Resource(Integer semester, String title, String type, String url) {
+        this.semester = semester;
+        this.title = title;
+        this.type = type;
+        this.url = url;
+    }
 
     public Integer getId() {
         return this.id;

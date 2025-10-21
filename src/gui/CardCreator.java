@@ -12,7 +12,9 @@ public class CardCreator {
         try {
             FXMLLoader l = new FXMLLoader((getClass().getResource("../resources/card.fxml")));
             Parent p = l.load();
-            ((CardController)l.getController()).setTexts(r.getTitle(), r.getType(), r.getId());
+            CardController cc = (CardController)l.getController();
+            cc.setTexts(r.getTitle(), r.getType(), r.getId());
+            cc.setFollowDestination(r.getUrl());
             return p;
         } catch(Exception e) {
             IO.println(e.getMessage());

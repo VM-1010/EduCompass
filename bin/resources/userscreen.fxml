@@ -14,7 +14,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
    <children>
-      <BorderPane layoutX="252.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0" stylesheets="@mainstyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <BorderPane layoutX="252.0" layoutY="233.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" stylesheets="@mainstyle.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <top>
             <HBox alignment="CENTER" prefHeight="49.0" prefWidth="1280.0" style="-fx-background-color: black;" styleClass="title-bar" stylesheets="@mainstyle.css" BorderPane.alignment="CENTER">
                <children>
@@ -34,9 +34,9 @@
          <center>
             <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
                <center>
-                  <Accordion fx:id="accord" BorderPane.alignment="CENTER">
+                  <Accordion fx:id="accord" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
                     <panes>
-                        <TitledPane fx:id="s1accord" animated="false" style="-fx-background-color: black;" text="Semester 1">
+                        <TitledPane fx:id="s1accord" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 1" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -45,7 +45,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord1" animated="false" style="-fx-background-color: black;" text="Semester 2">
+                        <TitledPane fx:id="s1accord1" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 2" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -54,7 +54,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord2" animated="false" style="-fx-background-color: black;" text="Semester 3">
+                        <TitledPane fx:id="s1accord2" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 3" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -63,7 +63,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord3" animated="false" style="-fx-background-color: black;" text="Semester 4">
+                        <TitledPane fx:id="s1accord3" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 4" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -72,7 +72,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord4" animated="false" style="-fx-background-color: black;" text="Semester 5">
+                        <TitledPane fx:id="s1accord4" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 5" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -81,7 +81,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord5" animated="false" style="-fx-background-color: black;" text="Semester 6">
+                        <TitledPane fx:id="s1accord5" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 6" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -90,7 +90,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord6" animated="false" style="-fx-background-color: black;" text="Semester 7">
+                        <TitledPane fx:id="s1accord6" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 7" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>
@@ -99,7 +99,7 @@
                               </ScrollPane>
                            </content>
                         </TitledPane>
-                        <TitledPane fx:id="s1accord7" animated="false" style="-fx-background-color: black;" text="Semester 8">
+                        <TitledPane fx:id="s1accord7" animated="false" style="-fx-background-color: black; -fx-border-color: #ff6600;" stylesheets="@mainstyle.css" text="Semester 8" textFill="#ff6600">
                            <content>
                               <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
                                  <content>

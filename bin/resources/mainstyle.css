@@ -63,3 +63,21 @@
 .screen {
     -fx-text-fill: #ff6600;
 }
+
+
+
+.titled-pane > .title {
+    -fx-background-color: #000;
+    -fx-text-fill: #ff6600;
+    -fx-font-size: 16px;
+    -fx-padding: 5 10 5 10;
+}
+
+
+.titled-pane > .title > .arrow {
+    -fx-background-color: transparent; /* optional */
+    -fx-shape: ""; /* remove the arrow shape */
+    -fx-padding: 0;
+    -fx-pref-width: 0;
+    -fx-pref-height: 0;
+}

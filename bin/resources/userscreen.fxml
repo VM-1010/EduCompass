@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/24.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
@@ -27,6 +31,88 @@
                </children>
             </HBox>
          </top>
+         <center>
+            <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+               <center>
+                  <Accordion fx:id="accord" BorderPane.alignment="CENTER">
+                    <panes>
+                        <TitledPane fx:id="s1accord" animated="false" style="-fx-background-color: black;" text="Semester 1">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord1" animated="false" style="-fx-background-color: black;" text="Semester 2">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord2" animated="false" style="-fx-background-color: black;" text="Semester 3">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord3" animated="false" style="-fx-background-color: black;" text="Semester 4">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord4" animated="false" style="-fx-background-color: black;" text="Semester 5">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord5" animated="false" style="-fx-background-color: black;" text="Semester 6">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord6" animated="false" style="-fx-background-color: black;" text="Semester 7">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="s1accord7" animated="false" style="-fx-background-color: black;" text="Semester 8">
+                           <content>
+                              <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="NEVER">
+                                 <content>
+                                    <VBox prefHeight="483.0" prefWidth="1272.0" style="-fx-background-color: black;" />
+                                 </content>
+                              </ScrollPane>
+                           </content>
+                        </TitledPane>
+                    </panes>
+                  </Accordion>
+               </center>
+            </BorderPane>
+         </center>
       </BorderPane>
    </children>
 </AnchorPane>

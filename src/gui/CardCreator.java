@@ -1,20 +1,21 @@
 
 package gui;
 
+import controllers.CardController;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import model.Resource;
 
 public class CardCreator {
 
-
-
-    public Parent make() {
+    public Parent make(Resource r) {
         try {
-            Parent p = new FXMLLoader((getClass().getResource("resources/card.fxml"))).load();
-            
+            FXMLLoader l = new FXMLLoader((getClass().getResource("../resources/card.fxml")));
+            Parent p = l.load();
+            ((CardController)l.getController()).setTexts(r.getTitle(), r.getType(), r.getId());
             return p;
         } catch(Exception e) {
-            e.printStackTrace();
+            IO.println(e.getMessage());
         }
         return null;
     }

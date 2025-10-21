@@ -44,7 +44,7 @@ public class App extends Application{
         
         MainDao d = new MainDao();
         for (model.Resource r : d.fetchAll()) {
-            IO.println(r);
+           //  IO.println(r);
         }
         
         s = new Stage();
